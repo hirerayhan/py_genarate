@@ -19,17 +19,44 @@ RESET = "\033[0m"
 BOLD = "\033[1m"
 
 def print_banner():
-    # Fixed alignment and replaced special unicode characters for CMD compatibility
-    banner = f"""{GREEN}
-    ╔════════════════════════════════════════════════════════════╗
-    ║                                                            ║
-    ║                 {BOLD}Tool Made By RAYHAN BISWAS{RESET}{GREEN}                 ║
-    ║                                                            ║
-    ║    Contact: https://www.facebook.com/rayhanbiswasbd.v2/    ║
-    ║                                                            ║
-    ╚════════════════════════════════════════════════════════════╝{RESET}
-"""
+    banner = f'''
+{MAGENTA}< ^^ >{RESET}
+{MAGENTA} ---- {RESET}
+{MAGENTA}     \\{RESET}
+{MAGENTA}      \\{RESET}
+                                         {BLUE}.::!!!!!!!:.{RESET}
+  {BLUE}.!!!!!:.{RESET}                               {BLUE}.:!!!!!!!!!!!!{RESET}
+  {MAGENTA}~~~~{BLUE}!!!!!!.{RESET}                      {BLUE}.:!!!!!!!!!!{CYAN}UWWW$$${RESET}
+      {BLUE}:${CYAN}$$NWX{BLUE}!!:{RESET}                {BLUE}.:!!!!!!{CYAN}XUWW$$$$$$$$$P{RESET}
+      {CYAN}$$$$$##WX{BLUE}!:{RESET}           {BLUE}.<{BLUE}!!!!{CYAN}UW$$$$"  $$$$$$$$#{RESET}
+      {CYAN}$$$$$  $$$UX{RESET}      {BLUE}:!!{CYAN}UW$$$$$$$$$   4$$$$$*{RESET}
+      {CYAN}^$$$B  $$$$\\{RESET}        {CYAN}$$$$$$$$$$$$   d$$R"{RESET}
+        {CYAN}"*$bd$$$${RESET}         {CYAN}'*$$$$$$$$$$$o+#"{RESET}
+             {CYAN}""""             """""""{RESET}
+
+{MAGENTA}    ┌──────────────────────────────{CYAN}──────────────────────────────┐{RESET}
+{MAGENTA}    │{RESET}                                                            {CYAN}│{RESET}
+{MAGENTA}    │{RESET} {BOLD}{CYAN}     _____           __     __ _    _             _   _  {RESET}{CYAN}│{RESET}
+{MAGENTA}    │{RESET} {BOLD}{CYAN}    |  __ \\    /\\    \\ \\   / /| |  | |      /\\   | \\ | | {RESET}{CYAN}│{RESET}
+{MAGENTA}    │{RESET} {BOLD}{CYAN}    | |__) |  /  \\    \\ \\_/ / | |__| |     /  \\  |  \\| | {RESET}{CYAN}│{RESET}
+{MAGENTA}    │{RESET} {BOLD}{CYAN}    |  _  /  / /\\ \\    \\   /  |  __  |    / /\\ \\ | . ` | {RESET}{CYAN}│{RESET}
+{MAGENTA}    │{RESET} {BOLD}{CYAN}    | | \\ \\ / ____ \\    | |   | |  | |   / ____ \\| |\\  | {RESET}{CYAN}│{RESET}
+{MAGENTA}    │{RESET} {BOLD}{CYAN}    |_|  \\_\\/_/    \\_\\  |_|   |_|  |_|  /_/    \\_\\_| \\_| {RESET}{CYAN}│{RESET}
+{MAGENTA}    │{RESET}                                                            {CYAN}│{RESET}
+{MAGENTA}    └──────────────────────────────{CYAN}──────────────────────────────┘{RESET}
+'''
     print(banner)
+
+    title = "Tool Made By RAYHAN BISWAS"
+    contact = "Contact: https://www.facebook.com/rayhanbiswasbd.v2/"
+
+    width = 68  # Account for the box formatting space
+    pad_t = (width - len(title)) // 2
+    print(f"{' ' * pad_t}{BOLD}{MAGENTA}{title}{RESET}")
+
+    pad_c = (width - len(contact)) // 2
+    print(f"{' ' * pad_c}{CYAN}{contact}{RESET}\n")
+
     print(f"{CYAN}[INFO] Tool Initialized successfully...{RESET}\n")
     time.sleep(2)
 
